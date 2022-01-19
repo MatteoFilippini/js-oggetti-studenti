@@ -12,7 +12,16 @@
 // PRENDO NOME,COGNOME,ETA DAL DOM
 const userName = document.getElementById('name');
 const userSurname = document.getElementById('surname');
-const UserAge = document.getElementById('age');
+const userAge = document.getElementById('age');
+// PRENDO IL BOTTONE
+const btnAdd = document.getElementById('add');
+
+btnAdd.addEventListener('click', function () {
+    const userNameValue = userName.value;
+    const userSurnameValue = userSurname.value;
+    const userAgeValue = userAge.value;
+    // console.log(userNameValue, userSurnameValue, userAgeValue);
+})
 
 // oggetto studente (nome,cognome,eta)
 const student = {
