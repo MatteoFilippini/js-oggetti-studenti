@@ -9,20 +9,8 @@
 
 
 
-// PRENDO NOME,COGNOME,ETA DAL DOM
-const userName = document.getElementById('name');
-const userSurname = document.getElementById('surname');
-const userAge = document.getElementById('age');
-// PRENDO IL BOTTONE
-const btnAdd = document.getElementById('add');
 
-btnAdd.addEventListener('click', function () {
-    const userNameValue = userName.value;
-    const userSurnameValue = userSurname.value;
-    const userAgeValue = userAge.value;
-    // console.log(userNameValue, userSurnameValue, userAgeValue);
-})
-
+// -------------------------1 PARTE------------------------
 // oggetto studente (nome,cognome,eta)
 const student = {
     nome: 'Matteo',
@@ -33,41 +21,70 @@ const student = {
 for (let key in student) {
     // console.log(`${key}: ${student[key]}`)
 }
+// -----------------------------------------------------------
 
-// array di oggetti studenti
-const students = [
-    { nome: 'Luca', cognome: 'Garda', eta: 20 },
-    { nome: 'Matteo', cognome: 'Filippini', eta: 21 },
-    { nome: 'Pietro', cognome: 'Fontana', eta: 43 },
-    { nome: 'Davide', cognome: 'Filippini', eta: 33 }
-]
 
-// for in studente
-for (let i = 0; i < students.length; i++) {
-    const current = students[i];
-    // console.log('STUDENTE-----------')
-    for (let key in students[i]) {
-        // console.log(`${key}: ${students[i][key]}`)
+
+
+
+
+
+
+
+// ------------------------2 PARTE------------------------------
+
+
+// PRENDO NOME,COGNOME,ETA DAL DOM
+const userName = document.getElementById('name');
+const userSurname = document.getElementById('surname');
+const userAge = document.getElementById('age');
+// PRENDO IL BOTTONE
+const btnAdd = document.getElementById('add');
+// VARIABILE IN CUI STAMPARE
+const print = document.getElementById('print');
+
+btnAdd.addEventListener('click', function () {
+    print.innerText = '';
+    // prendo il valore inserito
+    const userNameValue = userName.value;
+    const userSurnameValue = userSurname.value;
+    const userAgeValue = userAge.value;
+
+    // array di oggetti studenti
+    const students = [
+        { nome: 'Luca', cognome: 'Garda', eta: 20 },
+        { nome: 'Matteo', cognome: 'Filippini', eta: 21 },
+        { nome: 'Pietro', cognome: 'Fontana', eta: 43 },
+        { nome: 'Davide', cognome: 'Filippini', eta: 33 }
+    ]
+
+    // creo l oggetto
+    const ogg = {
+        nome: userNameValue,
+        cognome: userSurnameValue,
+        eta: userAgeValue
     }
-}
 
+    // metto nell array l oggetto
+    students.push(ogg);
 
-// creo l oggetto
-const ogg = {
-    // nome: prompt('Inserisci il nome dello studente che vuoi inserire', 'Carlo').trim(),
-    // cognome: prompt('Inserisci il ccognome dello studente che vuoi inserire', 'Farina').trim(),
-    // eta: prompt('Inserisci l eta dello studente che vuoi inserire', 4).trim()
-}
+    // for in studente
+    for (let i = 0; i < students.length; i++) {
+        const current = students[i];
+        // console.log('STUDENTE-----------')
+        for (let key in students[i]) {
+            // stampa in pagina
+            let element = document.createElement("div");
+            element.innerText = (`${key}: ${students[i][key]}`)
+            print.append(element);
 
-// metto nell array l oggetto
-students.push(ogg);
-
-
-for (let i = 0; i < students.length; i++) {
-    const current = students[i];
-    // console.log('STUDENTE-----------')
-    for (let key in students[i]) {
-        // console.log(`${key}: ${students[i][key]}`)
+            // stampo in console
+            console.log(`${key}: ${students[i][key]}`)
+        }
+        const row = document.createElement("hr");
+        print.append(row);
     }
-}
+})
+
+
 
