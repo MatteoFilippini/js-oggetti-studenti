@@ -17,4 +17,8 @@ const student = {
     eta: 20
 }
 
-console.log(student)
+for (let key in student) {
+    console.log(`${key}: ${student[key]}`)
+}
+
+// console.log(student)
