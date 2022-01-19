@@ -9,6 +9,11 @@
 
 
 
+// PRENDO NOME,COGNOME,ETA DAL DOM
+const userName = document.getElementById('name');
+const userSurname = document.getElementById('surname');
+const UserAge = document.getElementById('age');
+
 // oggetto studente (nome,cognome,eta)
 const student = {
     nome: 'Matteo',
@@ -17,7 +22,7 @@ const student = {
 }
 // for in studente
 for (let key in student) {
-    console.log(`${key}: ${student[key]}`)
+    // console.log(`${key}: ${student[key]}`)
 }
 
 // array di oggetti studenti
@@ -31,9 +36,9 @@ const students = [
 // for in studente
 for (let i = 0; i < students.length; i++) {
     const current = students[i];
-    console.log('STUDENTE-----------')
+    // console.log('STUDENTE-----------')
     for (let key in students[i]) {
-        console.log(`${key}: ${students[i][key]}`)
+        // console.log(`${key}: ${students[i][key]}`)
     }
 }
 
@@ -51,9 +56,9 @@ students.push(ogg);
 
 for (let i = 0; i < students.length; i++) {
     const current = students[i];
-    console.log('STUDENTE-----------')
+    // console.log('STUDENTE-----------')
     for (let key in students[i]) {
-        console.log(`${key}: ${students[i][key]}`)
+        // console.log(`${key}: ${students[i][key]}`)
     }
 }
 
