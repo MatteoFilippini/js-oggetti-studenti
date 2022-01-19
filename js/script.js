@@ -40,9 +40,9 @@ for (let i = 0; i < students.length; i++) {
 
 // creo l oggetto
 const ogg = {
-    nome: prompt('Inserisci il nome dello studente che vuoi inserire', 'Carlo').trim(),
-    cognome: prompt('Inserisci il ccognome dello studente che vuoi inserire', 'Farina').trim(),
-    eta: prompt('Inserisci l eta dello studente che vuoi inserire', 4).trim()
+    // nome: prompt('Inserisci il nome dello studente che vuoi inserire', 'Carlo').trim(),
+    // cognome: prompt('Inserisci il ccognome dello studente che vuoi inserire', 'Farina').trim(),
+    // eta: prompt('Inserisci l eta dello studente che vuoi inserire', 4).trim()
 }
 
 // metto nell array l oggetto
