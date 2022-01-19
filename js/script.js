@@ -38,8 +38,22 @@ for (let i = 0; i < students.length; i++) {
 }
 
 
-const userName = prompt('Inserisci il nome dello studente che vuoi inserire', 'Carlo').trim();
-const userSurame = prompt('Inserisci il ccognome dello studente che vuoi inserire', 'Farina').trim();
-const userAge = prompt('Inserisci l eta dello studente che vuoi inserire', 4).trim();
+// creo l oggetto
+const ogg = {
+    nome: prompt('Inserisci il nome dello studente che vuoi inserire', 'Carlo').trim(),
+    cognome: prompt('Inserisci il ccognome dello studente che vuoi inserire', 'Farina').trim(),
+    eta: prompt('Inserisci l eta dello studente che vuoi inserire', 4).trim()
+}
 
-console.log(userName, userSurame, userAge)
+// metto nell array l oggetto
+students.push(ogg);
+
+
+for (let i = 0; i < students.length; i++) {
+    const current = students[i];
+    console.log('STUDENTE-----------')
+    for (let key in students[i]) {
+        console.log(`${key}: ${students[i][key]}`)
+    }
+}
+
