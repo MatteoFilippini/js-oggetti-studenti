@@ -9,10 +9,6 @@
 
 
 
-
-
-// for in studente
-
 // oggetto studente (nome,cognome,eta)
 const student = {
     nome: 'Matteo',
@@ -27,10 +23,19 @@ for (let key in student) {
 // array di oggetti studenti
 const students = [
     { nome: 'Luca', cognome: 'Garda', eta: 20 },
-    { nome: 'Matteo', cognome: 'Filippini', eta: 21 }
+    { nome: 'Matteo', cognome: 'Filippini', eta: 21 },
+    { nome: 'Pietro', cognome: 'Fontana', eta: 43 },
+    { nome: 'Davide', cognome: 'Filippini', eta: 33 }
 ]
 
-
+// for in studente
+for (let i = 0; i < students.length; i++) {
+    const current = students[i];
+    console.log('STUDENTE-----------')
+    for (let key in students[i]) {
+        console.log(`${key}: ${students[i][key]}`)
+    }
+}
 
 
 
