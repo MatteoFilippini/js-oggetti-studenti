@@ -1,9 +1,9 @@
 /*
 1. Creare un oggetto che descriva uno studente, con le seguenti proprietà: nome, cognome e età.
 2. Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
-----------
 3. Creare un array di oggetti di studenti (ossìa oggetti con le proprietà sopra descritte).
 4. Ciclare su tutti gli studenti e stampare per ognuno di essi: nome e cognome.
+----------
 5. Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere all’array creato in precedenza, un nuovo oggetto studente inserendo nell’ ordine: nome, cognome e età.
 */
 
@@ -38,5 +38,8 @@ for (let i = 0; i < students.length; i++) {
 }
 
 
+const userName = prompt('Inserisci il nome dello studente che vuoi inserire', 'Carlo').trim();
+const userSurame = prompt('Inserisci il ccognome dello studente che vuoi inserire', 'Farina').trim();
+const userAge = prompt('Inserisci l eta dello studente che vuoi inserire', 4).trim();
 
-// console.log(student)
+console.log(userName, userSurame, userAge)
