@@ -43,6 +43,15 @@ const btnAdd = document.getElementById('add');
 // VARIABILE IN CUI STAMPARE
 const print = document.getElementById('print');
 
+
+// array di oggetti studenti
+const students = [
+    { nome: 'Luca', cognome: 'Garda', eta: 20 },
+    { nome: 'Matteo', cognome: 'Filippini', eta: 21 },
+    { nome: 'Pietro', cognome: 'Fontana', eta: 43 },
+    { nome: 'Davide', cognome: 'Filippini', eta: 33 }
+]
+
 btnAdd.addEventListener('click', function () {
     print.innerText = '';
     // prendo il valore inserito
@@ -50,13 +59,7 @@ btnAdd.addEventListener('click', function () {
     const userSurnameValue = userSurname.value;
     const userAgeValue = userAge.value;
 
-    // array di oggetti studenti
-    const students = [
-        { nome: 'Luca', cognome: 'Garda', eta: 20 },
-        { nome: 'Matteo', cognome: 'Filippini', eta: 21 },
-        { nome: 'Pietro', cognome: 'Fontana', eta: 43 },
-        { nome: 'Davide', cognome: 'Filippini', eta: 33 }
-    ]
+
 
     // creo l oggetto
     const ogg = {
