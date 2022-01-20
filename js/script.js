@@ -71,22 +71,30 @@ btnAdd.addEventListener('click', function () {
     // metto nell array l oggetto
     students.push(ogg);
 
-    // for in studente
-    for (let i = 0; i < students.length; i++) {
-        const current = students[i];
-        // console.log('STUDENTE-----------')
-        for (let key in students[i]) {
-            // stampa in pagina
-            let element = document.createElement("div");
-            element.innerText = (`${key}: ${students[i][key]}`)
-            print.append(element);
 
-            // stampo in console
-            console.log(`${key}: ${students[i][key]}`)
+
+    // FUNZIONE
+    const printObjectArray = (objectArray, targetElement) => {
+        // for in studente
+        for (let i = 0; i < students.length; i++) {
+            const currentObject = objectArray[i];
+            // console.log('STUDENTE-----------')
+            for (let key in currentObject) {
+                // stampa in pagina
+                let element = document.createElement("div");
+                element.innerText = (`${key}: ${currentObject[key]}`)
+                targetElement.append(element);
+
+                // stampo in console
+                console.log(`${key}: ${currentObject[key]}`)
+            }
+            const row = document.createElement("hr");
+            targetElement.append(row);
         }
-        const row = document.createElement("hr");
-        print.append(row);
     }
+
+    printObjectArray(students, print);
+
 })
 
 
